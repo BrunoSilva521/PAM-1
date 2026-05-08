@@ -2,12 +2,12 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import TelaInicial from "./componentes/TelaInicial";
-import TelaFilme1 from "./componentes/TelaFilme1";
-import TelaFilme2 from "./componentes/TelaFilme2";
-import TelaFilme3 from "./componentes/TelaFilme3";
+import TelaInicial from "./componentes/TelaInicial/";
+import TelaFilme1 from "./componentes/TelaFilme1/";
+import TelaFilme2 from "./componentes/TelaFilme2/";
+import TelaFilme3 from "./componentes/TelaFilme3/";
 
-const Stack = createStackNavigation();
+const Stack = createStackNavigator();
 
 export default function App (){
   return(

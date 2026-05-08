@@ -1,26 +1,31 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import logo from "../.../assets/logo.jpg";
-import styles from "../styles";
+import { StyleSheet, Text, View, Image, Button } from 'react-native';
+// import { blue } from 'react-native-reanimated/lib/typescript/Colors';
+// import { addWhitelistedNativeProps } from 'react-native-reanimated/lib/typescript/ConfigHelper';
+// import logo from "../.../assets/logo/a.avif";
 
 
 export default function TelaInicial (props){
+  
+  const cor = "#372d00";
   return (
-    <View style={styles.container}>
-      <Text>Assasino foda do grito uuuuu ghostface aaaaa</Text>
-      <image source={logo} style={estilos.imagem}></image>
+
+    
+    <View style={estilos.container}>
+      <Text style={estilos.titulo}></Text>
+      {/* <image source={logo} style={estilos.imagem}></image> */}
 
       <Text style={estilos.titulo}>
-        Você sabe qual é a ordem cronológica da franquia assasino fantasminha da faca UwU
+        Veja agora os top 3 melhoeres filmes do momento!!!!
       </Text>
 
       <Text style={estilos.textos}>
-        Os filmes da franquia fantasminha UwU estão abaixo. Clique nos botões
+         Clique nos botões↴
       </Text>
 
-      <Button title="Ver o 1º Filme" onPress = { () => props.navigation.navigate("Tela Filme 1") } color="#372d00" />
-      <Button title="Ver o 2º Filme" onPress = { () => props.navigation.navigate("Tela Filme 2") } color="#372d00" />
-      <Button title="Ver o 3º Filme" onPress = { () => props.navigation.navigate("Tela Filme 3") } color="#372d00" />
+      <Button title="Ver o 1º Filme" onPress = { () => props.navigation.navigate("Tela Filme 1") } style={estilos.BUTAO} color={cor} />
+      <Button title="Ver o 2º Filme" onPress = { () => props.navigation.navigate("Tela Filme 2") } style={estilos.BUTAO} color={cor} />
+      <Button title="Ver o 3º Filme" onPress = { () => props.navigation.navigate("Tela Filme 3") } style={estilos.BUTAO} color={cor} />
   
 
       <StatusBar style="auto" />
@@ -31,10 +36,35 @@ export default function TelaInicial (props){
 const estilos = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#252121ff',
     alignItems: 'center',
     justifyContent: 'center',
+    color: '#fff',
+    borderWidth: '20px',
+    borderColor: '#af3e3eff',
   },
+  titulo: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: '25px',
+    textAlign: 'center',
+    marginBottom: '50px',
+    
+
+  },
+  textos: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: '20px',
+    textAlign: 'center',
+    marginBottom: '30px',
+  },
+
+  BUTAO:{
+    color: "#372d00",
+  }
+
+  
 });
 
 
