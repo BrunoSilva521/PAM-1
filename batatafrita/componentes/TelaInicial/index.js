@@ -7,7 +7,9 @@ import { StyleSheet, Text, View, Image, Button } from 'react-native';
 
 export default function TelaInicial (props){
   
-  const cor = "#372d00";
+  const cor = "#af3e3eff";
+ 
+  
   return (
 
     
@@ -39,12 +41,12 @@ const estilos = StyleSheet.create({
     backgroundColor: '#252121ff',
     alignItems: 'center',
     justifyContent: 'center',
-    color: '#fff',
+    color: '#ffffff',
     borderWidth: '20px',
     borderColor: '#af3e3eff',
   },
   titulo: {
-    color: '#fff',
+    color: '#ffffff',
     fontWeight: 'bold',
     fontSize: '25px',
     textAlign: 'center',
@@ -61,8 +63,10 @@ const estilos = StyleSheet.create({
   },
 
   BUTAO:{
-    color: "#372d00",
-  }
+    backgroundColor: "#5e0404",
+    borderRadius: '10px',
+
+  },
 
   
 });
