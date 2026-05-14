@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { StyleSheet, Text, View, Image, Button } from 'react-native';
 
 export default function TelaFilme2 (){
     return (

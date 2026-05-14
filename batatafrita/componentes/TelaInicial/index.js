@@ -25,6 +25,16 @@ export default function TelaInicial (props){
          Clique nos botões↴
       </Text>
 
+       {/* <button style={estilos.B} onPress = { () => props.navigation.navigate("Tela Filme 1") } >
+        Ver filme 1
+      </button>
+      <button style={estilos.B} onPress = { () => props.navigation.navigate("Tela Filme 2") } >
+        Ver filme 2
+      </button>
+      <button style={estilos.B} onPress = { () => props.navigation.navigate("Tela Filme 3") } >
+        Ver filme 3
+      </button>  */}
+
       <Button title="Ver o 1º Filme" onPress = { () => props.navigation.navigate("Tela Filme 1") } style={estilos.BUTAO} color={cor} />
       <Button title="Ver o 2º Filme" onPress = { () => props.navigation.navigate("Tela Filme 2") } style={estilos.BUTAO} color={cor} />
       <Button title="Ver o 3º Filme" onPress = { () => props.navigation.navigate("Tela Filme 3") } style={estilos.BUTAO} color={cor} />
@@ -62,9 +72,13 @@ const estilos = StyleSheet.create({
     marginBottom: '30px',
   },
 
-  BUTAO:{
+  B:{
     backgroundColor: "#5e0404",
     borderRadius: '10px',
+    width: '200px',
+    height: '50px',
+    fontSize: '18px',
+
 
   },
 
