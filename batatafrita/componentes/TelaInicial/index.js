@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-native';
 // import { blue } from 'react-native-reanimated/lib/typescript/Colors';
 // import { addWhitelistedNativeProps } from 'react-native-reanimated/lib/typescript/ConfigHelper';
 // import logo from "../.../assets/logo/a.avif";
@@ -35,9 +35,21 @@ export default function TelaInicial (props){
         Ver filme 3
       </button>  */}
 
-      <Button title="Ver o 1º Filme" onPress = { () => props.navigation.navigate("Tela Filme 1") } style={estilos.BUTAO} color={cor} />
-      <Button title="Ver o 2º Filme" onPress = { () => props.navigation.navigate("Tela Filme 2") } style={estilos.BUTAO} color={cor} />
-      <Button title="Ver o 3º Filme" onPress = { () => props.navigation.navigate("Tela Filme 3") } style={estilos.BUTAO} color={cor} />
+     <TouchableOpacity 
+        style={estilos.B} 
+        activeOpacity={0.7}
+        onPress={() => props.navigation.navigate("Tela Filme 1")}
+      >
+        <Text style={estilos.TextoB}>Tela Filme 1</Text>
+      </TouchableOpacity>
+      <TouchableOpacity 
+        style={estilos.B} 
+        activeOpacity={0.7}
+        onPress={() => props.navigation.navigate("Tela Filme 2")}
+      >
+        <Text style={estilos.TextoB}>Tela Filme 2</Text>
+      </TouchableOpacity>
+      <Button title="Ver o 3º Filme" onPress = { () => props.navigation.navigate("Tela Filme 3") }  color={cor} />
   
 
       <StatusBar style="auto" />
@@ -73,14 +85,17 @@ const estilos = StyleSheet.create({
   },
 
   B:{
-    backgroundColor: "#5e0404",
-    borderRadius: '10px',
-    width: '200px',
-    height: '50px',
-    fontSize: '18px',
-
-
+    backgroundColor: "#af3e3eff",
+    padding: 15,
+    borderRadius: "100%", 
+    
   },
+
+  TextoB: {
+    fontSize: '25px',
+    textAlign: 'center',
+
+  }
 
   
 });
