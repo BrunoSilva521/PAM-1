@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-native';
+import { HoverEffect } from 'react-native-gesture-handler';
 // import { blue } from 'react-native-reanimated/lib/typescript/Colors';
 // import { addWhitelistedNativeProps } from 'react-native-reanimated/lib/typescript/ConfigHelper';
 // import logo from "../.../assets/logo/a.avif";
@@ -15,7 +16,7 @@ export default function TelaInicial (props){
     
     <View style={estilos.container}>
       <Text style={estilos.titulo}></Text>
-      {/* <image source={logo} style={estilos.imagem}></image> */}
+      <image source={"https://images.seeklogo.com/logo-png/37/1/cinema-logo-png_seeklogo-370335.png"} style={estilos.imagem}></image>
 
       <Text style={estilos.titulo}>
         Veja agora os top 3 melhoeres filmes do momento!!!!
@@ -40,14 +41,14 @@ export default function TelaInicial (props){
         activeOpacity={0.7}
         onPress={() => props.navigation.navigate("Tela Filme 1")}
       >
-        <Text style={estilos.TextoB}>Tela Filme 1</Text>
+        <Text style={estilos.TextoB}>Ver 1º Filme</Text>
       </TouchableOpacity>
       <TouchableOpacity 
         style={estilos.B} 
         activeOpacity={0.7}
         onPress={() => props.navigation.navigate("Tela Filme 2")}
       >
-        <Text style={estilos.TextoB}>Tela Filme 2</Text>
+        <Text style={estilos.TextoB}>Ver 2º Filme</Text>
       </TouchableOpacity>
       <Button title="Ver o 3º Filme" onPress = { () => props.navigation.navigate("Tela Filme 3") }  color={cor} />
   
@@ -85,16 +86,28 @@ const estilos = StyleSheet.create({
   },
 
   B:{
-    backgroundColor: "#af3e3eff",
-    padding: 15,
-    borderRadius: "100%", 
-    
+    backgroundColor: "#af3e3eff", 
+    width: "35%",
+    height: "5%",
+    borderWidth: "2px",
+    borderColor: "#fff",
+    borderRadius: "30px",
+    alignContent: "center",
+    marginBottom: '15px',
   },
 
   TextoB: {
-    fontSize: '25px',
+    color: "#fff",
+    fontSize: '20px',
+    fontWeight: "600",
     textAlign: 'center',
+    margin: 'auto',
 
+  },
+
+  imagem: {
+    width: "10%",
+    height: "10%",
   }
 
   
