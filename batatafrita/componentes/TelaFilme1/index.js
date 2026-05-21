@@ -9,6 +9,8 @@ export default function TelaFilme2 (){
         
        <View style={estilos.container}>
             <Text style={estilos.titulo}></Text>
+
+           
              
             <Text style={estilos.titulo}>
                 O agente secreto
@@ -19,7 +21,6 @@ export default function TelaFilme2 (){
             <Text style={estilos.desc}>
                 O agente secreto é um filme que ganhou o globo de ouro em 2025 WOWWW, e foi interpretado pelo grande ator Wagner Moura.
             </Text>
-
 
        </View>
 
@@ -59,5 +60,9 @@ const estilos = StyleSheet.create({
         borderWidth: 10,
         borderColor: "#af3e3eff",
         marginBottom: 30,
-    }
+
+    },
+
+    
+
 });

@@ -15,8 +15,13 @@ export default function TelaInicial (props){
 
     
     <View style={estilos.container}>
+
       <Text style={estilos.titulo}></Text>
-      <image source={"https://images.seeklogo.com/logo-png/37/1/cinema-logo-png_seeklogo-370335.png"} style={estilos.imagem}></image>
+
+      <Image 
+        source={require("../../assets/1.png")}
+        style={estilos.imagem}
+      />
 
       <Text style={estilos.titulo}>
         Veja agora os top 3 melhoeres filmes do momento!!!!
@@ -50,7 +55,14 @@ export default function TelaInicial (props){
       >
         <Text style={estilos.TextoB}>Ver 2º Filme</Text>
       </TouchableOpacity>
-      <Button title="Ver o 3º Filme" onPress = { () => props.navigation.navigate("Tela Filme 3") }  color={cor} />
+      
+     <TouchableOpacity 
+        style={estilos.B} 
+        activeOpacity={0.7}
+        onPress={() => props.navigation.navigate("Tela Filme 3")}
+      >
+        <Text style={estilos.TextoB}>Ver 3º Filme</Text>
+      </TouchableOpacity>
   
 
       <StatusBar style="auto" />
@@ -106,9 +118,10 @@ const estilos = StyleSheet.create({
   },
 
   imagem: {
-    width: "10%",
-    height: "10%",
-  }
+    width: "50%",
+    height: "25%",
+    marginBottom: '30px',
+  },
 
   
 });
