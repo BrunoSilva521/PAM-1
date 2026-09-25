@@ -130,11 +130,11 @@ const Titulo = () => {
   return (
     <View style={estilo.boxTitulo}>
       <Text style={estilo.tituloCabecalho}>
-        Sorteio DevMedia
+        Jogo dos Números
       </Text>
 
       <Text style={estilo.subtitulo}>
-        Hora de ver quem é o vencedor
+        Hora de ver quem é o vencedor!
       </Text>
     </View>
   );
@@ -145,7 +145,7 @@ const TelaInicial = () => {
 
   const [numeroEscolhido, setNumeroEscolhido] = useState(0);
 
-  const [numeroSorteado, setNumeroSorteado] = useState(0);
+  const [numeroSorteado, setNumeroSorteado] = useState("?");
 
   const [UltimoNumeroSorteado, setUltimoNumeroSorteado] = useState(0);
 
@@ -153,15 +153,16 @@ const TelaInicial = () => {
 
   const [pontosTotal, setPontosTotal] = useState(0);
 
-  const[text, setText] = useState(' ');
+  const[text, setText] = useState('');
 
-
+  
   const gerarNumero = () => {
 
     if(Rodadas < 5){
       setUltimoNumeroSorteado(numeroSorteado);
 
       const novoNumero = Math.floor(Math.random() * 100 + 1);
+
 
       setNumeroSorteado(novoNumero);
 
@@ -179,17 +180,18 @@ const TelaInicial = () => {
 
   const CalcularPontos = (numeroSorteado) =>{
     let pontos = 0
-    if(numeroEscolhido > numeroSorteado){
-      pontos = 100 - (numeroEscolhido - numeroSorteado);
-    } else if(numeroSorteado > numeroEscolhido){
-      pontos = 100 - (numeroSorteado - numeroEscolhido);
-    } else{
-      pontos = 100;
-    }
-
-    setPontosRodada(pontos);
-    setPontosTotal(pontosTotal+pontos);
+      if(numeroEscolhido > numeroSorteado){
+        pontos = 100 - (numeroEscolhido - numeroSorteado);
+      } else if(numeroSorteado > numeroEscolhido){
+        pontos = 100 - (numeroSorteado - numeroEscolhido);
+      } else{
+        pontos = 100;
+      }
+      setPontosRodada(pontos);
+      setPontosTotal(pontosTotal+pontos);
+   
   }
+  
 
 
 
@@ -225,6 +227,8 @@ const TelaInicial = () => {
           onPress={gerarNumero}
           color="#1f4f66"
         />
+
+        <Text style={estilo.PR2}>{text}</Text>
       </View>
 
       <View style={{ alignItems: 'center' }}>
@@ -233,7 +237,7 @@ const TelaInicial = () => {
       </View>
 
       <View style={{ alignItems: 'center' }}>
-        <Text style={estilo.PR}>Pontuação Total {pontosTotal}</Text>
+        <Text style={estilo.PR}>Pontuação Total </Text>
         <Text style={{ textAlign: 'center' }}>{pontosTotal} / 500</Text>
       </View>
 
